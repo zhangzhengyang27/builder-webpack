@@ -11,6 +11,8 @@ module.exports = {
     semi: ["error", "never"],
     "operator-linebreak": "off",
     "func-names": "off",
-    "no-console": "off"
+    "no-console": "off",
+    "import/extensions": "off",
+    "global-require": "off"
   }
 }
