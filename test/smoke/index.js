@@ -10,6 +10,7 @@ const mocha = new Mocha({
 // 修改工作目录
 process.chdir(path.join(__dirname, "template"))
 
+// rimraf 用于删除文件
 rimraf("./dist")
   .then(() => {
     // eslint-disable-next-line global-require, import/extensions
@@ -24,8 +25,8 @@ rimraf("./dist")
 
       console.log("Webpack build success, begin run test.")
 
-      mocha.addFile(path.join(__dirname, "html-test.js"))
-      mocha.addFile(path.join(__dirname, "css-js-test.js"))
+      mocha.addFile(path.join(__dirname, "html-test.js")) // 添加测试用例
+      mocha.addFile(path.join(__dirname, "css-js-test.js")) // 添加测试用例
       mocha.run()
     })
   })

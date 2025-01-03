@@ -1,7 +1,7 @@
 language: node_js
 sudo: false
 cache:
-  apt: true
+  apt: true # 缓存使用 apt 安装的依赖
   directories:
     - node modules
 node_js: stable # 设置相应的版本
